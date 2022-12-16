@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: my_book
+    password: my_book
+    driver-class-name: oracle.jdbc.OracleDriver
+
+# DataBase setting - oracle
+#  spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+#  spring.datasource.url=jdbc:oracle:thin:@localhost:1521/xe
+#  spring.datasource.username=my_book
+#  spring.datasource.password=my_book
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        show_sql: true
+        format_sql: true
+
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.type: trace
